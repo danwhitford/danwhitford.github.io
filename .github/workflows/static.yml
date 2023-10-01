@@ -31,14 +31,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Download pandoc
-        run: sudo wget https://github.com/jgm/pandoc/releases/download/3.1.6.1/pandoc-3.1.6.1-1-amd64.deb
-      - name: Install pandoc
-        run: sudo dpkg -i pandoc-3.1.6.1-1-amd64.deb
-      - name: Print Pandoc version
-        run: pandoc --version
-      - name: Build
-        run: make
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
